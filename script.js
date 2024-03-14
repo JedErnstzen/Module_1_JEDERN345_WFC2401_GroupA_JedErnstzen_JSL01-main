@@ -1,22 +1,28 @@
 function validateSyntax() {
+    
+    // fetches value from html and also trims whitespace
     let input = document.getElementById('petInput').value.trim();
     
-
-    // Validation logic goes here
-
+    // declares a variable that is named
     let petStart = "pet_";
 
-
-    let validParameter = new parameter('^' + petStart + '[0-9]+[a-zA-Z]+$', 'i');
+    // Constructs regex pattern starting with dynamic variable.
+    let validParameter = new RegExp('^'.concat(petStart, '[0-9]+[a-zA-Z]+$'));
 
     let result = ''; // Placeholder for validation result
 
-    // TODO: Write your validation logic here
+   
+   // if and else statement which validates the result and changes the color of the Circle   
+   if (validParameter.test(input)) {
+    result = 'Valid Syntax';
+    document.getElementById('indicator').style.backgroundColor = '#00FF00';
+} else {
+    result = 'Invalid Syntax';
+    document.getElementById('indicator').style.backgroundColor = '#FF0000';
+}
 
-
-   // Check if input starts with 'pet_' and followed by alphanumeric characters
-
-            document.getElementById('result').innerText = result;
+    // Updates the html result with the content from the variable "result"
+    document.getElementById('result').innerText = result;
 }
 
 

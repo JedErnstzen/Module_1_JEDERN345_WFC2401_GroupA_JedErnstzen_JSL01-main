@@ -36,14 +36,19 @@ button:hover {
     margin-top: 20px;
 }
 
-.valid {
-    color: #008000;
+/* General fitting for all the elements in the container*/
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.invalid {
-    color: #ff4500;
-}
-
-.emoji {
-    font-size: 1.5em;
+/* Indicator symbol */
+.indicator_1{
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-bottom: 10px;
 }
