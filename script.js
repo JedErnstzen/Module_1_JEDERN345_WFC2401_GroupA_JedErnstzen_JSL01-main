@@ -7,7 +7,9 @@ function validateSyntax() {
     let petStart = "pet_";
 
     // Constructs regex pattern starting with dynamic variable.
-    let validParameter = new RegExp('^'.concat(petStart, '[0-9]+[a-zA-Z]+$'));
+    let validParameter = new RegExp('^'.concat(petStart, '[0-9]{4}[a-zA-Z]+$'));
+
+
 
     let result = ''; // Placeholder for validation result
 
@@ -24,5 +26,13 @@ function validateSyntax() {
     // Updates the html result with the content from the variable "result"
     document.getElementById('result').innerText = result;
 }
+
+
+
+
+
+
+
+
 
 
